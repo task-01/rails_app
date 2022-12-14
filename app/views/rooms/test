@@ -1,0 +1,90 @@
+<header>
+  <a><img alt="サイトロゴ画像" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png"></a>
+  <span class="menu">メニュー</span>
+  <ul class="menu_ul">
+    <li class="menu_li"><%= link_to 'ルーム登録', :edit_room %></li>
+    <li class="menu_li"><a href="#">予約済みルーム一覧</a></li>
+    <li class="menu_li"><a href="#">登録済みルーム一覧</a></li>
+    <li class="menu_li"><a href="#">設定</a></li>
+    <li class="menu_li"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete%></li>
+  </ul>
+  <% if @room.user.image.attached? %>
+    <%= image_tag @room.user.image, class: "user_icon"%>
+  <% else %>
+    <%= image_tag 'no_image' %>
+  <% end %>
+</header>
+<div class='account_show'>
+  <div class='account_page'>
+      <h3>プロフィール</h3>
+      <table class='account_table'>
+        <tr>
+          <th>がぞ</th>
+          <td><%= image_tag @room.image, class: "room_image" %></td>
+        </tr>
+        <tr>
+          <th>なm</th>
+          <td><%= @room.roomName %></td>
+        </tr>
+        <tr>
+          <th>じゅうしょ</th>
+          <td><%= @room.roomAddress %></td>
+        </tr>
+        <tr>
+          <th>しょうか</th>
+          <td><%= @room.roomIntroduction %></td>
+        </tr>
+        <tr>
+          <th>金</th>
+          <td><%= @room.roomMoney %></td>
+        </tr>
+      </table>
+  </div>
+</div>
+
+
+
+edit_room
+<header>
+  <a><img alt="サイトロゴ画像" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png"></a>
+  <span class="menu">メニュー</span>
+  <ul class="menu_ul">
+    <li class="menu_li"><%= link_to 'ルーム登録', :edit_room %></li>
+    <li class="menu_li"><a href="#">予約済みルーム一覧</a></li>
+    <li class="menu_li"><a href="#">登録済みルーム一覧</a></li>
+    <li class="menu_li"><a href="#">設定</a></li>
+    <li class="menu_li"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete%></li>
+  </ul>
+  <% if @room.user.image.attached? %>
+    <%= image_tag @room.user.image, class: "user_icon"%>
+  <% else %>
+    <%= image_tag 'no_image' %>
+  <% end %>
+</header>
+<div class='account_show'>
+  <div class='account_page'>
+      <h3>プロフィール</h3>
+      <table class='account_table'>
+        <tr>
+          <th>がぞ</th>
+          <td><%= image_tag @room.image, class: "room_image" %></td>
+        </tr>
+        <tr>
+          <th>なm</th>
+          <td><%= @room.roomName %></td>
+        </tr>
+        <tr>
+          <th>じゅうしょ</th>
+          <td><%= @room.roomAddress %></td>
+        </tr>
+        <tr>
+          <th>しょうか</th>
+          <td><%= @room.roomIntroduction %></td>
+        </tr>
+        <tr>
+          <th>金</th>
+          <td><%= @room.roomMoney %></td>
+        </tr>
+      </table>
+  </div>
+</div>
